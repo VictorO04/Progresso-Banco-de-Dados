@@ -5,12 +5,16 @@ Este repositório está em constante evolução. Abaixo estão as principais atu
 - **CRUD COMPLETO**: Implementações das operações de Create, Read, Update e Delete.
   - **CREATE**: Adição de novos registros ao banco de dados.
   - **READ**: Consulta os dados gravados no banco.
+  - **UPDATE**: Atualiza os dados que o adiministrador desejar.
+  - **DELETE**: Deleta Aquilo que desejar.
 
   ```sql
+  -- Database --
   CREATE DATABASE gameflixdb;
   \c gameflixdb;
   \! cls;
 
+  -- tabela usuarios --
   CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50),
@@ -19,7 +23,7 @@ Este repositório está em constante evolução. Abaixo estão as principais atu
     data_cadastro DATE
   );
 
-  -- Dados iniciais - USUARIOS
+  -- Dados iniciais --
   INSERT INTO usuarios (username, email, pontos, data_cadastro)
   VALUES
   ('NoobMaster', 'noob@gameflix.com', 1500, '2024-01-15'),
